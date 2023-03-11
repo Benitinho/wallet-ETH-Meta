@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 
 function getProductos() {
     // return axios.get('http://localhost:8080/sql?sql=select * from products')
-    return axios.get('http://localhost:8080/sql?sql=select company_name , city from customers c order by city')
+    // return axios.get('http://localhost:8080/sql?sql=select company_name , city from customers c order by city')
+    return axios.get('http://localhost:5555/sql?sql=select%20*%20from%20customers order by ID')
 };
 
 
@@ -40,14 +41,24 @@ export function Products() {
         <table className="table">
             <thead>
                 <tr>
-                    <th>Name Company</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Country</th>
                     <th>City</th>
                 </tr>
             </thead>
             <tbody>
             {productos.data.map(producto => (
-                    <tr key={producto.company_name}>
-                        <td>{producto.company_name}</td>
+                    <tr key={producto.id}>
+                        <td>{producto.id}</td>
+                        <td>{producto.name}</td>
+                        <td>{producto.address}</td>
+                        <td>{producto.email}</td>
+                        <td>{producto.number_phone}</td>
+                        <td>{producto.country}</td>
                         <td>{producto.city}</td>
                     </tr>
                 ))}
@@ -58,6 +69,8 @@ export function Products() {
         // <div>
         //     {JSON.stringify(productos)}
         // </div>
+        // [{"id":1,"name":"John Doe","email":"johndoe@example.com","phone":"555-1234"}]
+       
     )
 };
 

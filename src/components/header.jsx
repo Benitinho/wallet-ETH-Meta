@@ -16,7 +16,7 @@ class Header  extends Component {
           <Link className="nav-link active" aria-current="page" to="/products">Products</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/balance">Balance</Link>
+          <Link className="nav-link active" aria-current="page" to="/balances">Balance</Link>
         </li>
       </ul>
     </div>

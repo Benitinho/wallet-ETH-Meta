@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 function getProductos() {
     // return axios.get('http://localhost:8080/sql?sql=select * from products')
     // return axios.get('http://localhost:8080/sql?sql=select company_name , city from customers c order by city')
-    return axios.get('http://localhost:5555/sql?sql=select%20*%20from%20customers order by ID')
+    return axios.get('http://localhost:5555/sql?sql=select%20*%20from%20customers order by name')
 };
 
 

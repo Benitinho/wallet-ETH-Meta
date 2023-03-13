@@ -3,9 +3,13 @@ import { useQuery } from "react-query"
 import React, { Component } from 'react';
 
 function getProductos() {
-    // return axios.get('http://localhost:8080/sql?sql=select * from products')
+    // return axios.get('http://localhost:8080/sql?sql=select * from products ')
+    return axios.get('http://localhost:5555/sql?sql=select * from customers ')
+    // return axios.get('http://localhost:8080/sql?sql=select%20*%20from%20customers order by address')
     // return axios.get('http://localhost:8080/sql?sql=select company_name , city from customers c order by city')
-    return axios.get('http://localhost:5555/sql?sql=select%20*%20from%20customers order by name')
+    // return axios.get('http://localhost:5555/sql?sql=select%20*%20from%20customers order by name')
+    // return axios.get('http://localhost:5555/sql?sql=select%20*%20from%20customers order by name')
+    
 };
 
 

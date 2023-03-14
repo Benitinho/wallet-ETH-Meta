@@ -1,13 +1,6 @@
-1. yarn init -y (create package.json)
-2. yarn add express (install express)
-3. npm install pg ( PostgreSQL client for Node.js.)
-4. Create connection with database
+1. DataBase folder
+   => index.js (Listen port 5555)
+   => .env (Listen port 8080, where is the dataBase Postgress)
 
-const { Pool } = require('pg')
-const pool = new Pool({
-user: 'your_username',
-host: 'your_hostname',
-database: 'your_database_name',
-password: 'your_password',
-port: 5432, // or your database's port number
-})
+2. Inside Wallet
+   => Axios ( link to port 5555, http://localhost:5555/sql?sql=select....)
